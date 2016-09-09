@@ -1,5 +1,6 @@
-install: git clone https://github.com/sstephenson/bats.git
-script: script/test
+sudo: false
+install: git clone --depth 1 https://github.com/sstephenson/bats.git
+script: PATH="./bats/bin:$PATH" script/test
 language: c
 notifications:
   email:
